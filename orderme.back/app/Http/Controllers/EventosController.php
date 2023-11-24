@@ -18,32 +18,6 @@ class EventosController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     */
-    public function create(Request $request)
-    {
-        $data = $request->json()->all();
-
-        $validator = Validator::make($data, [
-            'Evento' => 'required|string',
-            'Evento' => 'required|date',
-        ]);
-
-        if ($validator->fails()) {
-            return response()->json(['erro' => $validator->errors()], 400);
-        }
-
-        $evento = new Evento();
-        $evento->nome = $request->input('nome');
-        $evento->data = $request->input('data');
-
-        $evento->save();
-
-        return response()->json(['message' => 'Evento criado com sucesso'], 201);
-
-    }
-
-    /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)

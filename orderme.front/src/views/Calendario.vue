@@ -16,7 +16,7 @@
           <template #header>
             <div class="d-flex" style="gap: 0.8rem;">
               <Button label="Novo" severity="success" class="btn btn-outline-primary"
-                      @click="AbrirModal(this)"></Button>
+                      @click="AbrirModal()"></Button>
               <Button label="Deletar" severity="danger" class="btn btn-outline-danger"
                       @click="confirmDeleteSelected()"></Button>
             </div>
@@ -61,7 +61,7 @@ export default {
     }
   },
   methods: {
-    AbrirModal(args) {
+    AbrirModal() {
       if (this.dadosAlt.Data == null) {
         this.$toast.add({
           severity: 'warn',
@@ -83,9 +83,9 @@ export default {
     salvarEvento() {
       console.log(this.dadosAlt);
       if (this.dadosAlt.Evento != null) {
-        axios.post('eventos', this.dadosAlt).then((res) => {
-
-        })
+        // axios.post('eventos', this.dadosAlt).then((res) => {
+        //
+        // })
       } else {
         this.$toast.add({severity: 'warn', detail: 'Não é possivel salvar algo sem nome', life: 2000});
       }
