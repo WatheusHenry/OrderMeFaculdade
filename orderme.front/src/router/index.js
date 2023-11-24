@@ -1,5 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Calendario from "@/views/Calendario.vue";
+import Pomodoro from "@/views/Pomodoro.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -40,7 +42,16 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/PerfilView.vue')
-    }
+    },
+    {
+      path: '/calendario',
+      name: 'perfil',
+      component: Calendario
+    },
+    {
+      path: '/pomodoro',
+      component: Pomodoro
+    },
   ]
 })
 

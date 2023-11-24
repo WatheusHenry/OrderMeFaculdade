@@ -2,14 +2,14 @@
   <div class="d-flex" style="width: 80vw">
     <div>
       <div class="position-absolute top-0 mt-3 start-5">
-        <img src="/src/assets/Logo.svg" alt="Order.me" style="width: 10rem" />
+        <img src="/src/assets/Logo.svg" alt="Order.me" style="width: 10rem"/>
       </div>
       <div class="position-absolute top-0 end-0" style="margin-right: 2rem">
         <div class="d-flex mt-3">
           <a href="" class="mx-4 espacamento">Sobre nós</a>
           <a href="" class="mx-4 espacamento">Comunidades</a>
           <a href="" class="mx-4 espacamento">Funcionalidades</a>
-          
+
         </div>
       </div>
     </div>
@@ -23,20 +23,20 @@
             <form>
               <div class="form-group input-group input-group-sm mb-4" style="margin-top: 50px">
                 <input
-                  v-model="email"
-                  class="form-control"
-                  placeholder="E-mail"
-                  type="text"
-                  style="border: 4px solid black"
+                    v-model="email"
+                    class="form-control"
+                    placeholder="E-mail"
+                    type="text"
+                    style="border: 4px solid black"
                 />
               </div>
               <div class="form-group input-group input-group-sm mb-4">
                 <input
-                  v-model="password"
-                  class="form-control"
-                  placeholder="Senha"
-                  type="password"
-                  style="border: 4px solid black"
+                    v-model="password"
+                    class="form-control"
+                    placeholder="Senha"
+                    type="password"
+                    style="border: 4px solid black"
                 />
               </div>
               <div class="d-flex justify-content-center">
@@ -45,19 +45,20 @@
               <div class="text-center">
                 <p style="color: White; margin-top: 2rem; font-weight: bolder">Não tem login?</p>
                 <RouterLink class="h-10" style="color: #fed78c; font-weight: bolder" to="/"
-                  >Registre-se!</RouterLink
+                >Registre-se!
+                </RouterLink
                 >
               </div>
             </form>
             <div
-              v-if="loginStatus === 'success'"
-              style="color: green; text-align: center; margin-top: 1rem"
+                v-if="loginStatus === 'success'"
+                style="color: green; text-align: center; margin-top: 1rem"
             >
               Login bem-sucedido! Redirecionando...
             </div>
             <div
-              v-if="loginStatus === 'error'"
-              style="color: red; text-align: center; margin-top: 1rem"
+                v-if="loginStatus === 'error'"
+                style="color: red; text-align: center; margin-top: 1rem"
             >
               Login falhou. Verifique suas credenciais.
             </div>
@@ -134,15 +135,12 @@ export default {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-shadow: 0px 1px 0px #000;
   filter: dropshadow(color=#000, offx=0px, offy=1px);
-  -webkit-box-shadow:
-    inset 0 1px 0 #ffe5c4,
-    0 10px 0 #000000;
-  -moz-box-shadow:
-    inset 0 1px 0 #ffe5c4,
-    0 10px 0 #000000;
-  box-shadow:
-    inset 0 1px 0 #ffe5c4,
-    0 10px 0 #000000;
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4,
+  0 10px 0 #000000;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4,
+  0 10px 0 #000000;
+  box-shadow: inset 0 1px 0 #ffe5c4,
+  0 10px 0 #000000;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -151,15 +149,12 @@ export default {
 .button-teste a:active {
   top: 10px;
   background-color: #fed78c;
-  -webkit-box-shadow:
-    inset 0 1px 0 #ffe5c4,
-    inset 0 -3px 0 #fed78c;
-  -moz-box-shadow:
-    inset 0 1px 0 #ffe5c4,
-    inset 0 -3pxpx 0 #fed78c;
-  box-shadow:
-    inset 0 1px 0 #ffe5c4,
-    inset 0 -3px 0 #fed78c;
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4,
+  inset 0 -3px 0 #fed78c;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4,
+  inset 0 -3pxpx 0 #fed78c;
+  box-shadow: inset 0 1px 0 #ffe5c4,
+  inset 0 -3px 0 #fed78c;
 }
 
 .button-teste:after {
