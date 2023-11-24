@@ -127,9 +127,7 @@ export default {
         .then((response) => {
           if (response.data.status) {
             this.registrationStatus = 'success'
-            this.$router.push('/List')
-          } else {
-            this.registrationStatus = 'error'
+            // this.$router.push('/List')
           }
         })
         .catch((error) => {
