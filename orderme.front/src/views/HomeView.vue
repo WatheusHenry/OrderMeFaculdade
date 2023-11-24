@@ -1,9 +1,11 @@
 <script setup>
-// import TheWelcome from '../components/TheWelcome.vue'
+//import LoginView from './LoginView.vue';
+
+import PerfilView from './PerfilView.vue'
 </script>
 
 <template>
   <main>
-    <!-- <TheWelcome /> -->
+    <PerfilView />  
   </main>
 </template>
