@@ -6,6 +6,6 @@ import PerfilView from './PerfilView.vue'
 
 <template>
   <main>
-    <PerfilView /> 
+    <PerfilView />  
   </main>
 </template>
