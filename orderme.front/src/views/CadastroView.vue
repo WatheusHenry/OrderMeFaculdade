@@ -78,6 +78,13 @@
                     >Fazer Login!</RouterLink
                   >
                 </div>
+                <!-- Exibição da mensagem de erro -->
+                <div
+                  v-if="registrationStatus === 'error'"
+                  style="color: red; text-align: center; margin-top: 1rem"
+                >
+                  Falha no registro. Verifique os dados e tente novamente.
+                </div>
               </form>
               <div
                 v-if="registrationStatus === 'success'"
@@ -85,23 +92,16 @@
               >
                 Registro bem-sucedido!
               </div>
-              <div
-                v-if="registrationStatus === 'error'"
-                style="color: red; text-align: center; margin-top: 1rem"
-              >
-                Falha no registro. Verifique os dados e tente novamente.
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
   </section>
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 
 export default {
   data() {
@@ -113,31 +113,37 @@ export default {
       registrationStatus: null
     }
   },
-  methods: {
-    register() {
-      const formData = {
-        name: this.name,
-        email: this.email,
-        password: this.password,
-        password_confirmation: this.passwordConfirmation
-      }
 
-      axios
-        .post('/register', formData)
-        .then((response) => {
-          if (response.data.status) {
-            this.registrationStatus = 'success'
-            this.$router.push('/List')
-          } else {
-            this.registrationStatus = 'error'
-          }
-        })
-        .catch((error) => {
-          console.error('Erro de registro:', error)
-          this.registrationStatus = 'error'
-        })
+
+  methods: {
+  async register() {
+    const formData = {
+      name: this.name,
+      email: this.email,
+      password: this.password,
+      password_confirmation: this.passwordConfirmation
+    };
+
+    try {
+      const response = await axios.post('/register', formData);
+
+      if (response.data.status) {
+        // Registro bem-sucedido
+        this.registrationStatus = 'success';
+      } else {
+        // Exiba a mensagem específica de erro do servidor
+        this.registrationStatus = 'error';
+        console.error(response.data.message);
+      }
+    } catch (error) {
+      console.error('Erro de registro:', error);
+      // Exiba uma mensagem de erro genérica
+      this.registrationStatus = 'error';
     }
   }
+}
+
+  
 }
 </script>
 

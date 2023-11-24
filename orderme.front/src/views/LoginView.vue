@@ -9,7 +9,6 @@
           <a href="" class="mx-4 espacamento">Sobre nós</a>
           <a href="" class="mx-4 espacamento">Comunidades</a>
           <a href="" class="mx-4 espacamento">Funcionalidades</a>
-          
         </div>
       </div>
     </div>
@@ -20,7 +19,7 @@
             <h4 class="card-title text-center mt-5" style="color: white; font-weight: bold">
               Login
             </h4>
-            <form>
+            <form @submit.prevent="login">
               <div class="form-group input-group input-group-sm mb-4" style="margin-top: 50px">
                 <input
                   v-model="email"
@@ -40,13 +39,13 @@
                 />
               </div>
               <div class="d-flex justify-content-center">
-                <button class="button-teste" @click="login">Entrar</button>
+                <button class="button-teste">Entrar</button>
               </div>
               <div class="text-center">
                 <p style="color: White; margin-top: 2rem; font-weight: bolder">Não tem login?</p>
-                <RouterLink class="h-10" style="color: #fed78c; font-weight: bolder" to="/"
-                  >Registre-se!</RouterLink
-                >
+                <router-link class="h-10" style="color: #fed78c; font-weight: bolder" to="/cadastro">
+                  Registre-se!
+                </router-link>
               </div>
             </form>
             <div
@@ -66,11 +65,10 @@
       </div>
     </div>
   </div>
-
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 
 export default {
   data() {
@@ -78,34 +76,36 @@ export default {
       email: '',
       password: '',
       loginStatus: null
-    }
+    };
   },
   methods: {
     login() {
       const formData = {
         email: this.email,
         password: this.password
-      }
+      };
 
-      axios
-        .post('/login', formData)
+      axios.post('/login', formData)
         .then((response) => {
           if (response.data.status) {
-            this.loginStatus = 'success'
-            // Redirecione o usuário para a página desejada, por exemplo:
-            this.$router.push('/List')
+            // Login bem-sucedido
+            this.loginStatus = 'success';
+            // Redirecionar para a tela PomodoroView
+            this.$router.push('/PomodoroView');
           } else {
-            this.loginStatus = 'error'
+            // Falha no login
+            this.loginStatus = 'error';
           }
         })
         .catch((error) => {
-          console.error('Erro de login:', error)
-          this.loginStatus = 'error'
-        })
+          console.error('Erro de login:', error);
+          this.loginStatus = 'error';
+        });
     }
   }
-}
+};
 </script>
+
 
 <style scoped>
 .custom-background {

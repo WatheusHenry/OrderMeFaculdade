@@ -1,29 +1,22 @@
-<?php
-
+<?php 
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
 use Illuminate\Support\Facades\Auth;
-use \Illuminate\Support\Facades\Hash;
 
-class RegisterController extends Controller
+class LoginController extends Controller
 {
-    
-    public function store(Request $request)
+    public function check(Request $request)
     {
-       $input = $request->all();
-
-       User::create([
-        'name' => $input['name'],
-        'email' => $input['email'],
-        'password' => Hash::make($input['password'])
-      ]);
-
-          return response()->json(['status' => true,
-                                    'message' => "Registation Success"   
-        
+        $credentials = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
         ]);
-    }
 
+        if (Auth::attempt($credentials)) {
+            return response()->json(['status' => true, 'message' => 'Login bem-sucedido']);
+        }
+
+        return response()->json(['status' => false, 'message' => 'Credenciais inválidas'], 401);
+    }
 }
