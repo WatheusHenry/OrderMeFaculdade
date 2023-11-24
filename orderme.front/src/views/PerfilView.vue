@@ -1,50 +1,59 @@
-<template>
-    <div>
-      <div style="text-align: center;">
-        <h1 style="text-align: center;">Perfil</h1>
-      </div>
-      <section>
-        <div class="d-flex justify-content-between">
-          <div class="d-flex justify-content-between">
-            <!-- Seu elemento de cartão -->
-            <div
-              style="
-                border: 10px solid black;
-                margin-left: 10rem;
-                margin-top: 5rem;
-                height: 80vh;
-                width: 50rem;
-                background-color: azure;
-              "
-            >
-            <div class="d-flex align-items-center" style="padding: 30px;">
-                <div>
-                    <h2 style="font-weight: bolder; margin-bottom: 10px;">Nome</h2>
-                    <div class="mb-3">
-                    <input type="text" class="form-control" id="nomeInput" aria-describedby="nomeHelp" style="border: 4px solid black; width: 300px;">
-                    </div>
-                    <h2 style="font-weight: bolder;">E-mail</h2>
-                    <div class="mb-3">
-                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="border: 4px solid black; width: 400px;">
-                    </div>
-                </div>
-                <div style="margin-left: auto; margin-right: 20px;">
-                    <img src="/src/assets/person-circle.svg" alt="Imagem" style="width: 10rem; height: auto;">
-                </div>
-                </div>
 
-              <div ontouchstart="">
-                  <div class="d-flex justify-content-center">
-                    <button class="button-perfil">Editar</button>
-                  </div>
+<template>
+  <div>
+    <div style="text-align: center; margin-top: 3rem; margin-left: 28rem;">
+      <h1 style="text-align: center; font-weight: bolder; color: black;">Perfil</h1>
+    </div>
+    <section>
+      <div class="d-flex justify-content-center">
+        <div
+          style="
+            border: 10px solid black;
+            margin-top: 5rem;
+            width: 55rem;
+            background-color: azure;
+            margin-left: 30rem;
+          "
+        >
+          <div class="d-flex align-items-center" style="padding: 30px;">
+            <div style="flex: 1;">
+              <h2 style="font-weight: bolder; margin-bottom: 10px; color: black;">Nome</h2>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="nomeInput" aria-describedby="nomeHelp" style="border: 4px solid black; width: 50%;">
+              </div>
+              <h2 style="font-weight: bolder; color: black;">E-mail</h2>
+              <div class="mb-3">
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" style="border: 4px solid black; width: 70%;">
+              </div>
             </div>
+            <div style="margin-left: 20px; margin-right: 20px;">
+              <img src="/src/assets/person-circle.svg" alt="Imagem" style="width: 10rem; height: auto;">
+            </div>
+          </div>
+          <div ontouchstart="">
+            <div class="d-flex justify-content-center">
+              <button class="button-perfil">Editar</button>
+            </div>
+          </div>
+
+          <div style="display: flex; border: 2px solid black; margin-top: 2rem; padding: 3rem; width: 97%; margin-left: 14px; margin-bottom: 20px;">
+       
+            <div style="display: flex; align-items: center; margin-right: 5%; margin-left: 2rem;">
+              <img src="/src/assets/bookmark-fill.svg" alt="salvos" style="width: 30px; height: 50px; margin-right: 5px;">
+              <p style="font-weight: bolder; color: black; margin: 0;">Publicações Salvas</p>
+            </div>
+
+           
+            <div style="display: flex; align-items: center; margin-left: 15%;">
+              <img src="/src/assets/tags.svg" alt="salvos" style="width: 30px; height: 50px; margin-right: 2px;">
+              <p style="font-weight: bolder; color: black; margin: 0;">Tópicos Seguidos</p>
             </div>
           </div>
         </div>
-      </section>
-    </div>
-  </template>
-  
+      </div>
+    </section>
+  </div>
+</template>
   
 
   
@@ -57,7 +66,6 @@
   .button-perfil {
     position: relative;
     display: inline-block;
-    margin: 20px;
     margin-right: 20rem;
   }
   
