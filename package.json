@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "primeicons": "^6.0.1",
+    "primevue": "^3.41.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue-jsx": "^3.1.0"
+  }
+}
