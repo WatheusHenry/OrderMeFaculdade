@@ -38,6 +38,20 @@
                     <button class="button-perfil">Editar</button>
                   </div>
             </div>
+            <div class="position-fixed top-0 end-0" style="margin-top: 2rem; margin-right: 2rem;">
+        <div class="position-fixed top-0 start-0" style="height: 100vh; width: 2rem; background-color: #FED78C; padding: 2rem;">
+          <div class="d-flex flex-column align-items-center mt-2">
+            <a href="pomodoro" class="mx-4 espacamento"> <img src="/src/assets/clock.svg"></a>
+            <a href="calendario" class="mx-4 espacamento"> <img src="/src/assets/calendar-date.svg"></a>
+            <a href="list" class="mx-4 espacamento"> <img src="/src/assets/list.svg"></a>
+            <a href="comunidade" class="mx-4 espacamento"> <img src="/src/assets/people-fill.svg"></a>
+            <a href="" class="mx-4 espacamento"> <img src="/src/assets/share-fill.svg"></a>
+            <a href="perfil" class="mx-4 espacamento"> <img src="/src/assets/person-circle.svg"></a>
+        
+          </div>
+        </div>
+
+</div>
             </div>
           </div>
         </div>

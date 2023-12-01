@@ -45,7 +45,7 @@ const router = createRouter({
     },
     {
       path: '/calendario',
-      name: 'perfil',
+      name: 'calendario',
       component: Calendario
     },
     {

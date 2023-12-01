@@ -1,5 +1,6 @@
 <template>
-  <div style="outline: 0.6rem black solid;">
+
+  <div style="outline: 0.6rem black solid; margin-top: 10rem;">
     <div class="card" :style="{ 'background-color': isBreak ? 'lightblue' : 'white' }" style="width: 70rem;">
       <div class="card-body" style="display: flex; flex-direction: row; align-items: center; align-content: center; flex-wrap: wrap; justify-content: space-around;">
         <div style="display: flex; flex-direction: column; align-items: center;">
@@ -32,8 +33,26 @@
         <Column field="Data" header="Data"></Column>
         <Column field="Ciclos" header="Ciclos"></Column>
       </DataTable>
-    </div>
+      <div class="position-fixed top-0 end-0" style="margin-top: 2rem; margin-right: 2rem;">
+        <div class="position-fixed top-0 start-0" style="height: 100vh; width: 2rem; background-color: #FED78C; padding: 2rem;">
+  <div class="d-flex flex-column align-items-center mt-2">
+    <a href="pomodoro" class="mx-4 espacamento"> <img src="/src/assets/clock.svg"></a>
+    <a href="calendario" class="mx-4 espacamento"> <img src="/src/assets/calendar-date.svg"></a>
+    <a href="list" class="mx-4 espacamento"> <img src="/src/assets/list.svg"></a>
+    <a href="comunidade" class="mx-4 espacamento"> <img src="/src/assets/people-fill.svg"></a>
+    <a href="" class="mx-4 espacamento"> <img src="/src/assets/share-fill.svg"></a>
+    <a href="perfil" class="mx-4 espacamento"> <img src="/src/assets/person-circle.svg"></a>
+ 
   </div>
+</div>
+
+</div>
+      </div>
+</div>
+
+
+
+  
 </template>
 
 <script>
@@ -114,5 +133,13 @@ export default {
 
 html {
   overflow: hidden;
+}
+.espacamento {
+  display: flex;
+  margin-top: 1rem;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bolder;
 }
 </style>

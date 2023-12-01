@@ -40,11 +40,12 @@
                 />
               </div>
               <div class="d-flex justify-content-center">
-                <button class="button-teste" @click="login">Entrar</button>
+               <Routerlink class="button-teste" @click="login" to="/cronometro">Entrar
+              </Routerlink>
               </div>
               <div class="text-center">
                 <p style="color: White; margin-top: 2rem; font-weight: bolder">Não tem login?</p>
-                <RouterLink class="h-10" style="color: #fed78c; font-weight: bolder" to="/"
+                <RouterLink class="h-10" style="color: #fed78c; font-weight: bolder" to="/cadastro"
                 >Registre-se!
                 </RouterLink
                 >
